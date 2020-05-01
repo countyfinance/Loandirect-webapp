@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loan Direct - Dashboard</title>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="Loan Direct" name="quick loans">
+    <meta content="Loan Direct" name="fast loans">
+    <meta content="Loan Direct" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="favicon.png" rel="shortcut icon">
+    <link href="apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet" type="text/css">
+    <link href="bower_components/select2/dist/css/select2.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="bower_components/dropzone/dist/dropzone.css" rel="stylesheet">
+    <link href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+    <link href="bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
+    <link href="css/main.css?version=4.4.0" rel="stylesheet">
+  </head>
+  <body class="menu-position-side menu-side-left full-screen with-content-panel">
+    <div class="all-wrapper with-side-panel solid-bg-all">
+      <div aria-hidden="true" class="onboarding-modal modal fade animated show-on-load" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-centered" role="document">
+          <div class="modal-content text-center">
+            <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span class="close-label">Skip Intro</span><span class="os-icon os-icon-close"></span></button>
+            <div class="onboarding-slider-w">
+              <div class="onboarding-slide">
+                <div class="onboarding-media">
+                  <img alt="" src="img/bigicon2.png" width="200px">
+                </div>
+                <div class="onboarding-content with-gradient">
+                  <h4 class="onboarding-title">
+                   Get Full Control of your Loans and Investment
+                  </h4>
+                  <div class="onboarding-text">
+                    Track your loans and investments in real time!!!
+                  </div>
+                </div>
+              </div>
+              <div class="onboarding-slide">
+                <div class="onboarding-media">
+                  <img alt="" src="img/bigicon5.png" width="200px">
+                </div>
+                <div class="onboarding-content with-gradient">
+                  <h4 class="onboarding-title">
+                    Edit your profile
+                  </h4>
+                  <div class="onboarding-text">
+                    Review and make adjustments to your profile and keep it up to date
+                  </div>
+                </div>
+              </div>
+              <div class="onboarding-slide">
+                <div class="onboarding-media">
+                  <img alt="" src="img/bigicon6.png" width="200px">
+                </div>
+                <div class="onboarding-content with-gradient">
+                  <h4 class="onboarding-title">
+                    Get your money in your account in minutes!!!
+                  </h4>
+                  <div class="onboarding-text">
+                    Receive alert for your loan disbursements as well as
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="search-with-suggestions-w">
+        <div class="search-with-suggestions-modal">
+          <div class="element-search">
+            <input class="search-suggest-input" placeholder="Start typing to search..." type="text">
+              <div class="close-search-suggestions">
+                <i class="os-icon os-icon-x"></i>
+              </div>
+            </input>
+          </div>
+        </div>
+      </div>
+      <div class="layout-w">
+        <!--------------------
+        START - Mobile Menu
+        -------------------->
+        <div class="menu-mobile menu-activated-on-click color-scheme-default">
+          <div class="mm-logo-buttons-w">
+            <a class="" href="index.html"><img src="img/logo2.png" alt="Image" height="52" width="200">></a>
+            <div class="mm-buttons">
+              <div class="mobile-menu-trigger">
+                <div class="os-icon os-icon-hamburger-menu-1"></div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-and-user">
+            <div class="logged-user-w">
+              <div class="avatar-w">
+                <img alt="" src="img/avatar1.png">
+              </div>
+              <div class="logged-user-info-w">
+                <div class="logged-user-name">
+                  Yakubu Johntela
+                </div>
+                <div class="logged-user-role">
+                  Client ID: 123456
+                </div>
+              </div>
+            </div>
+            <!--------------------
+            START - Mobile Menu List
+            -------------------->
+            <ul class="main-menu">
+              <li class="has-sub-menu">
+                <a href="#">
+                  <div class="icon-w">
+                    <div class="os-icon os-icon-grid"></div>
+                  </div>
+                  <span>Dashboard</span></a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="loan_dash.html">My Loans</a>
+                  </li>
+                  <li>
+                    <a href="invest_dash.html">My Investments</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-sub-menu">
+                <a href="#">
+                  <div class="icon-w">
+                    <div class="os-icon os-icon-settings"></div>
+                  </div>
+                  <span>Manage Account</span></a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="users_profile.html">My Profile</a>
+                  </li>
+                  <li>
+                    <a href="debitcard.html">Debit cards</a>
+                  </li>
+                  <li>
+                    <a href="bankaccount.html">Bank Accounts</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-sub-menu">
+                <a href="#">
+                  <div class="icon-w">
+                    <div class="os-icon os-icon-book-open"></div>
+                  </div>
+                  <span>Pages</span></a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="auth_lock.html">Account Lock</a>
+                  </li>
+                  <li>
+                    <a href="terms.html">Terms of Use</a>
+                  </li>
+                  <li>
+                    <a href="privacy.html">Privacy</a>
+                  </li>
+                  <li>
+                    <a href="faq.html">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="contact.html">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="auth_login.html">Logout</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!--------------------
+            END - Mobile Menu List
+            -------------------->
+          </div>
+        </div>
+        <!--------------------
+        END - Mobile Menu
+        --------------------><!--------------------
+        START - Main Menu
+        -------------------->
+        <div class="menu-w color-scheme-light color-style-default menu-position-side menu-side-left menu-layout-full sub-menu-style-over sub-menu-color-bright selected-menu-color-light menu-activated-on-hover menu-has-selected-link">
+          <div class="">
+            <img alt=""src="img/logo-bigedit.png">
+              <div class="logo-element"></div>
+            </a>
+          </div>
+          <ul class="main-menu">
+            <li class="sub-header">
+              <span>Dashboard</span>
+            </li>
+			<a href="#">
+        <li class="">
+          <a href="loan_dash.html">
+            <div class="icon-w">
+              <div class="os-icon os-icon-grid"></div>
+            </div>
+            <span>My Loans</span></a>
+        </li>
+        <li class="">
+          <a href="invest_dash.html">
+            <div class="icon-w">
+              <div class="os-icon os-icon-grid"></div>
+            </div>
+            <span>My Investments</span></a>
+        </li>
+            <li class="sub-header">
+              <span>Manage Account</span>
+            </li>
+            <li class="">
+              <a href="users_profile.html">
+                <div class="icon-w">
+                  <div class="os-icon os-icon-user"></div>
+                </div>
+                <span>My Profile</span></a>
+            </li>
+            <li class="">
+              <a href="debitcard.html">
+                <div class="icon-w">
+                  <div class="os-icon os-icon-credit-card"></div>
+                </div>
+                <span>Debit Card</span></a>
+            </li>
+            <li class="">
+              <a href="bankaccount.html">
+                <div class="icon-w">
+                  <div class="os-icon os-icon-home"></div>
+                </div>
+                <span>Bank Accounts</span></a>
+            </li>
+            <li class="sub-header">
+              <span>Pages</span>
+            </li>
+            <li class="">
+              <a href="auth_lock.html">
+                <div class="icon-w">
+                  <div class="os-icon os-icon-lock"></div>
+                </div>
+                <span>Account lock</span></a>
+            </li>
+            <li class="">
+              <a href="terms.html">
+                <div class="icon-w">
+                  <div class="os-icon os-icon-info"></div>
+                </div>
+                <span>Terms of Use</span></a>
+               <div class="sub-menu-w">
+               </div>
+            </li>
+            <li class="">
+              <a href="privacy.html">
+                <div class="icon-w">
+                  <div class="os-icon os-icon-shield"></div>
+                </div>
+                <span>Privacy</span></a>
+            </li>
+            <li class="">
+              <a href="faq.html">
+                <div class="icon-w">
+                  <div class="os-icon os-icon-newspaper"></div>
+                </div>
+                <span>FAQ</span></a>
+            </li>
+            <li class="">
+              <a href="contact'html">
+                <div class="icon-w">
+                  <div class="os-icon os-icon-phone"></div>
+                </div>
+                <span>Contact Us</span></a>
+            </li>
+            <li class="">
+              <a href="auth_login.html">
+                <div class="icon-w">
+                  <div class="os-icon os-icon-signs-11"></div>
+                </div>
+                <span >Logout</span></a>
+            </li>
+          </ul>
+        </div>
+
+        <!--------------------
+        END - Main Menu
+        -------------------->
+        <div class="content-w">
+          <!--------------------
+          START - Top Bar
+          -------------------->
+          <div class="top-bar color-scheme-transparent">
+            <!--------------------
+            START - Top Menu Controls
+            -------------------->
+            <div class="top-menu-controls">
+              <!--------------------
+              START - Messages Link in secondary top menu
+              -------------------->
+              <div class="messages-notifications os-dropdown-trigger os-dropdown-position-left">
+                <i class="os-icon os-icon-bell"></i>
+                <div class="new-messages-count">
+                  1
+                </div>
+                <div class="os-dropdown light message-list">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div class="user-avatar-w">
+                          <img alt="" src="img/avatar1.png">
+                        </div>
+                        <div class="message-content">
+                          <h6 class="message-from">
+                            Loan Direct
+                          </h6>
+                          <h6 class="message-title">
+                            Account Update
+                          </h6>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--------------------
+            END - Top Menu Controls
+            -------------------->
+            <div class="logged-user-w">
+              <div class="logged-user-i">
+                <div class="avatar-w">
+                  <img alt="" src="img/avatar1.png">
+                </div>
+                <div class="logged-user-menu color-style-bright">
+                  <div class="logged-user-avatar-info">
+                    <div class="avatar-w">
+                      <img alt="" src="img/avatar1.png">
+                    </div>
+                    <div class="logged-user-info-w">
+                      <div class="logged-user-name">
+                        Yakubu Johntela
+                      </div>
+                      <div class="logged-user-role">
+                        Client ID: 123456
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-icon">
+                    <i class="os-icon os-icon-user"></i>
+                  </div>
+                  <ul>
+                    <li>
+                      <a href="users_profile.html"><i class="os-icon os-icon-user-male-circle2"></i><span>Profile Details</span></a>
+                    </li>
+                    <li>
+                      <a href="auth_lock.html"><i class="os-icon os-icon-lock"></i><span>Account lock</span></a>
+                    </li>
+                    <li>
+                      <a href="auth_login.html"><i class="os-icon os-icon-signs-11"></i><span>Logout</span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--------------------
+          END - Top Bar
+          --------------------><!--------------------
+          START - Breadcrumbs
+          -------------------->
+          <!--------------------
+          END - Breadcrumbs
+          -------------------->
+          <div class="content-i">
+            <div class="content-box">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="element-wrapper compact p4">
+                      <div class="element-actions">
+                    </div>
+                    <h4 class="element-header">
+                      My Loans
+                    </h4>
+                    <div>
+                    <button class="btn btn-secondary btn-lg pull-right" data-target="#getloan" data-toggle="modal" type="button">Get Loan</button><button class="btn btn-secondary btn-lg pull-right" data-target="#repayment" data-toggle="modal" type="button">Make Repayment</button>
+                    <div aria-hidden="true" class="onboarding-modal modal fade animated" id="getloan" role="dialog" tabindex="-1">
+                      <div class="modal-dialog modal-lg modal-centered" role="document">
+                        <div class="modal-content text-center">
+                          <button aria-label="Close" class="close" data-dismiss="modal" type="button"></button>
+                          <div class="onboarding-side-by-side">
+                            <div class="onboarding-media">
+                              <img alt="" src="img/bigicon5.png" width="200px">
+                            </div>
+                            <div class="onboarding-content with-gradient">
+                              <h4 class="onboarding-title">
+                                Loan Calculator
+                              </h4>
+                              <div class="onboarding-text">
+                                Please note: The offer below is an estimate based on the request you have provided below. Your final offer will be determined subject to your loan application, credit report analysis and verification.
+                              </div>
+                              <form>
+                                <div class="row">
+                                  <div class="col-sm-6">
+                                    <div class="form-group">
+                                      <label for="">Loan Amount</label><input class="form-control" placeholder="Enter loan amount" type="number" value="">
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-6">
+                                    <div class="form-group">
+                                      <label for="">Loan Duration (Month)</label><select class="form-control">
+                                        <option>
+                                          select
+                                        </option>
+                                        <option>
+                                          1
+                                        </option>
+                                        <option>
+                                          2
+                                        </option>
+                                        <option>
+                                          3
+                                        </option>
+                                        <option>
+                                          4
+                                        </option>
+                                        <option>
+                                          5
+                                        </option>
+                                        <option>
+                                          6
+                                        </option>
+                                        <option>
+                                          7
+                                        </option>
+                                        <option>
+                                          8
+                                        </option>
+                                        <option>
+                                          9
+                                        </option>
+                                        <option>
+                                          10
+                                        </option>
+                                        <option>
+                                          11
+                                        </option>
+                                        <option>
+                                          12
+                                        </option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                              <div class="row">
+                              <div class="col-sm-6">
+                                <a class="element-box el-tablo centered trend-in-corner smaller">
+                                  <div class="label">
+                                    Monthly Repayment
+                                  </div>
+                                  <div class="value">
+                                    ₦13,000
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="col-sm-6">
+                                <a class="element-box el-tablo centered trend-in-corner smaller">
+                                  <div class="label">
+                                    Total Repayment
+                                  </div>
+                                  <div class="value">
+                                    ₦50,000
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                              <div class="cta-btn">
+                                <a class="btn btn-primary btn-lg" href="loan_application_form.html"><span>Proceed</span><i class="os-icon os-icon-arrow-right4"></i><i class="os-icon os-icon-arrow-right4"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="repayment" role="dialog" tabindex="-1">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                              Make Repayment
+                            </h5>
+                            <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true"> &times;</span></button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="form-group">
+                                <label for=""> Enter Amount</label><input class="form-control" placeholder="Tap here & enter .. (e.g 5000)" type="text">
+                              </div>
+                              <div class="form-group">
+                                <label for="">Repayment Process</label><select class="form-control">
+                                  <option>
+                                    Select Payment Process
+                                  </option>
+                                  <option>
+                                    Debit Card
+                                  </option>
+                                  <option>
+                                    Bank Transfer
+                                  </option>
+                                </select>
+                              </div>
+                            </form>
+                            <div class="col-sm-6">
+                              <a class="element-box el-tablo centered trend-in-corner smaller">
+                                <div class="Amount Due">
+                                  Amount Due
+                                </div>
+                                <div class="value">
+                                  ₦15,000
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <a class="btn btn-primary" href="#" type="button">Proceed</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <br>
+                  </br>
+                  </div>
+                    <div class="element-content">
+                      <div class="row">
+                        <div class="col-sm-4 col-xxxl-3">
+                          <a class="element-box el-tablo" href="#">
+                            <div class="label">
+                              Total Loans
+                            </div>
+                            <div class="value">
+                              1
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-sm-4 col-xxxl-3">
+                          <a class="element-box el-tablo" href="#">
+                            <div class="label">
+                              Active Loans
+                            </div>
+                            <div class="value">
+                              1
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-sm-4 col-xxxl-3">
+                          <a class="element-box el-tablo" href="#">
+                            <div class="label">
+                              Pending Repayments
+                            </div>
+                            <div class="value">
+                              ₦15,000
+                            </div>
+                          </a>
+                        </div>
+                        <div class="d-none d-xxxl-block col-xxxl-3">
+                          <a class="element-box el-tablo" href="#">
+                            <div class="label">
+                              Total Transactions
+                            </div>
+                            <div class="value">
+                              1
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 col-xxxl-9">
+                  <div class="element-wrapper">
+                    <h4 class="element-header">
+                    Loan Status
+                  </h4>
+                  <!--START - Transactions Table-->
+                  <div class="element-wrapper">
+                    <div class="element-box-tp">
+                      <div class="table-responsive">
+                        <table class="table table-padded">
+                          <thead>
+                            <tr>
+                              <th>
+                                Status
+                              </th>
+                              <th>
+                                Date
+                              </th>
+                              <th>
+                                Description
+                              </th>
+                              <th class="text-center">
+                                Loan Amount
+                              </th>
+                              <th class="text-center">
+                                Loan Duration
+                              </th>
+                              <th class="text-center">
+                                Loan Repayment Amount
+                              </th>
+                              <th class="text-right">
+                                Next Repayment Date
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="nowrap">
+                                <span class="status-pill smaller green"></span><span>Loan Disbured</span>
+                              </td>
+                              <td>
+                                <span>Today</span><span class="smaller lighter">4:30pm</span>
+                              </td>
+                              <td class="cell-with-media">
+                                <img alt="" src="#" style="height: 25px;"><span>Medical Rent</span>
+                              </td>
+                              <td class="text-center">
+                                <a class="badge badge-success" href="">200,000 NGN</a>
+                              </td>
+                              <td class="text-center">
+                                <a class="badge badge-success" href="">5 months</a>
+                              </td>
+                              <td class="text-center">
+                                <a class="badge badge-fail" href="">280,000 NGN</a>
+                              </td>
+                              <td class="text-right bolder nowrap">
+                                <span class="text-success">15th April, 2020</span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!--END - Transactions Table-->
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                </div>
+              </div><!--------------------
+              START - Color Scheme Toggler
+              -------------------->
+              <div class="floated-colors-btn first-floated-btn">
+                <div class="os-toggler-w">
+                  <div class="os-toggler-i">
+                    <div class="os-toggler-pill"></div>
+                  </div>
+                </div>
+                <i class="os-icon os-icon-eye"></i>
+              </div>
+              <!--------------------
+              END - Color Scheme Toggler
+              --------------------><!--------------------
+              START - Chat Popup Box
+              -------------------->
+
+              <!--------------------
+              END - Chat Popup Box
+              -------------------->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="display-type"></div>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/popper.js/dist/umd/popper.min.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/chart.js/dist/Chart.min.js"></script>
+    <script src="bower_components/select2/dist/js/select2.full.min.js"></script>
+    <script src="bower_components/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+    <script src="bower_components/ckeditor/ckeditor.js"></script>
+    <script src="bower_components/bootstrap-validator/dist/validator.min.js"></script>
+    <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="bower_components/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+    <script src="bower_components/dropzone/dist/dropzone.js"></script>
+    <script src="bower_components/editable-table/mindmup-editabletable.js"></script>
+    <script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+    <script src="bower_components/bootstrap/js/dist/util.js"></script>
+    <script src="bower_components/bootstrap/js/dist/alert.js"></script>
+    <script src="bower_components/bootstrap/js/dist/button.js"></script>
+    <script src="bower_components/bootstrap/js/dist/carousel.js"></script>
+    <script src="bower_components/bootstrap/js/dist/collapse.js"></script>
+    <script src="bower_components/bootstrap/js/dist/dropdown.js"></script>
+    <script src="bower_components/bootstrap/js/dist/modal.js"></script>
+    <script src="bower_components/bootstrap/js/dist/tab.js"></script>
+    <script src="bower_components/bootstrap/js/dist/tooltip.js"></script>
+    <script src="bower_components/bootstrap/js/dist/popover.js"></script>
+    <script src="js/demo_customizer.js?version=4.4.0"></script>
+    <script src="js/main.js?version=4.4.0"></script>
+  </body>
+</html>
